@@ -65,6 +65,15 @@ app.get('/bad', (req, res) => {
         errorMessage: 'Unable to get the page'
     });
 });
+
+app.get('/projects', (req, res) => {
+    // res.send('<h1>Hello Express!</h>');
+    // res.send('About page');
+    res.render('projects.hbs', {
+        pageTitle: 'Projects'
+    });
+});
+
 app.listen(port, () => {
     console.log('Server is up on port 3000');
 });
